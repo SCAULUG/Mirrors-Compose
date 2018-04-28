@@ -28,6 +28,7 @@ function rebuild {
 if [[ $# -ne 1 ]]
 then
     usage
+    exit 1
 fi
 
 case "$1" in
