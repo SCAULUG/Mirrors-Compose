@@ -1,0 +1,20 @@
+version: "3"
+services:
+    nginx:
+        build:
+            context: ./Mirrors-Nginx
+        container_name: nginx
+        restart: always
+        volumes:
+            - /mirrors/mirrors/:/mirrors/:ro
+            - /ssl/:/ssl:ro
+        ports:
+            - 80:80
+            - 443:443
+    sync:
+        build:
+            context: ./Mirrors-Sync
+        container_name: sync
+        restart: always
+        volumes:
+            - /mirrors/mirrors:/mirrors
