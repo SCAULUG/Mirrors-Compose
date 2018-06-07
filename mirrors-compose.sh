@@ -12,12 +12,12 @@ function install {
     git clone --depth 1 https://github.com/SCAULUG/Mirrors-Nginx.git
     docker-compose build --no-cache
     docker-compose up -d
-    rm -rf Mirrore-Sync Mirrors-Nginx
 }
 
 function uninstall {
     docker-compose stop
     docker-compose rm -f
+    rm -rf Mirrore-Sync Mirrors-Nginx
 }
 
 function rebuild {
