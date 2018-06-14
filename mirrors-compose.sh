@@ -17,7 +17,7 @@ function install {
 function uninstall {
     docker-compose stop
     docker-compose rm -f
-    rm -rf Mirrore-Sync Mirrors-Nginx
+    rm -rf Mirrors-Sync Mirrors-Nginx
 }
 
 function rebuild {
