@@ -9,6 +9,7 @@ services:
         volumes:
             - /mirrors/mirrors/:/mirrors/:ro
             - /ssl/:/ssl:ro
+            - /nginx/log/:/var/log/nginx/
     sync:
         build:
             context: ./Mirrors-Sync
